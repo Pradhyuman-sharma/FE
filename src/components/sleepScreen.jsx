@@ -11,10 +11,11 @@ import { Screen5 } from "./sleepScreenComponenets/Screen5";
 import { FinalScreen } from "./sleepScreenComponenets/FinalScreen";
 import { useSelector } from "react-redux";
 
-const  token  = useSelector((state) => state.authToken.value);
 
 const SleepScreen = () => {
   const [formStep, setFormStep] = useState(6);
+  const  token  = useSelector((state) => state.authToken.value);
+
 
   useEffect(() => {
     getSleepFormData(token).then((res) => {
