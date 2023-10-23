@@ -3,7 +3,7 @@ import axios from 'axios';
 // ************ localhost ************
 //  const BASE_URL = `http://localhost:8000/`;
 
-const BASE_URL= `https://wysa-sleep-form-api.onrender.com`;
+const BASE_URL= `https://wysa-sleep-form-api.onrender.com/`;
 
 const headers = {
   // Accept: 'application/json',
