@@ -3,9 +3,10 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import { toast } from 'react-toastify';
 import { updateSleepFormData } from '../../services/apiService';
+import { useSelector } from 'react-redux';
 
 export const Screen5 = ({ formStep, setFormStep }) => {
-    const token = localStorage.getItem("wysa-token");
+  const  token  = useSelector((state) => state.authToken.value);
     const [selectedTime, setSelectedTime] = useState("");
     const updateFormDataApiCall = () => {
       const data = {

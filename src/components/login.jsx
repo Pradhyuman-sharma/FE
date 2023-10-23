@@ -17,6 +17,7 @@ const Login = () => {
     };
     loginUser(data).then((res) => {
       if (res?.success) {
+
         dispatch(addToken(res?.token));
         toast.success(res?.message, { position: "top-center" });
         navigate("/sleepForm");

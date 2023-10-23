@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import { updateSleepFormData } from "../../services/apiService";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
 
 export const Screen1 = ({formStep,setFormStep}) => {
   const [values, setValues] = useState([]);
-    const token = localStorage.getItem("wysa-token");
+  const  token  = useSelector((state) => state.authToken.value);
   const updateFormDataApiCall = ()=>{
     const data={
         updateValue:{

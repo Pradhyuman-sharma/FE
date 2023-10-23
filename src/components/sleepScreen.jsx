@@ -9,8 +9,9 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Screen4 } from "./sleepScreenComponenets/Screen4";
 import { Screen5 } from "./sleepScreenComponenets/Screen5";
 import { FinalScreen } from "./sleepScreenComponenets/FinalScreen";
+import { useSelector } from "react-redux";
 
-const token = localStorage.getItem("wysa-token");
+const  token  = useSelector((state) => state.authToken.value);
 
 const SleepScreen = () => {
   const [formStep, setFormStep] = useState(6);
